@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ColorsCollectionViewCell" id="gTV-IL-0wX" customClass="ColorsCollectionViewCell" customModule="Wallpaper_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="96" height="102"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="96" height="102"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8Q-92-oqf">
+                        <rect key="frame" x="0.0" y="0.0" width="96" height="102"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xR-lv-zIo">
+                                <rect key="frame" x="23" y="26" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DK3-xX-MZi"/>
+                                    <constraint firstAttribute="width" secondItem="4xR-lv-zIo" secondAttribute="height" multiplier="1:1" id="o6b-CF-7cz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4xR-lv-zIo" firstAttribute="centerY" secondItem="m8Q-92-oqf" secondAttribute="centerY" id="1h9-K5-byN"/>
+                            <constraint firstItem="4xR-lv-zIo" firstAttribute="centerX" secondItem="m8Q-92-oqf" secondAttribute="centerX" id="up7-ib-ZKC"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="m8Q-92-oqf" secondAttribute="trailing" id="55M-LW-Gsa"/>
+                <constraint firstAttribute="top" secondItem="m8Q-92-oqf" secondAttribute="top" id="QWx-VY-x36"/>
+                <constraint firstItem="m8Q-92-oqf" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="hpg-VH-YpR"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="m8Q-92-oqf" secondAttribute="bottom" id="zD2-V5-FCP"/>
+            </constraints>
+            <size key="customSize" width="96" height="102"/>
+            <connections>
+                <outlet property="colorView" destination="4xR-lv-zIo" id="mTA-LQ-LvJ"/>
+                <outlet property="outerView" destination="m8Q-92-oqf" id="SFi-O0-pzu"/>
+            </connections>
+            <point key="canvasLocation" x="169.56521739130437" y="155.35714285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
