@@ -57,9 +57,6 @@ extension PageViewController:  UIPageViewControllerDelegate, UIPageViewControlle
     
     func bind() {
     
-        viewModel.cityName.sink(receiveValue: {
-            print($0)
-        }).store(in: &subscriptions)
     }
     
 }

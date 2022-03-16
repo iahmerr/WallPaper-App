@@ -9,21 +9,18 @@ import Foundation
 import Combine
 
 
-class HomeViewModel {
+class HomeViewModel: ObservableObject {
     
     private var subscriptions = Set<AnyCancellable>()
     var tabSelectedSubject = PassthroughSubject<Int,Never>()
     let pagingViewModel = PagingViewModel()
     init() {
         
-        pagingViewModel.cityName.sink(receiveValue: {
-            print("here", $0)
-        }).store(in: &subscriptions)
-        
         tabSelectedSubject
             .sink(receiveValue: {[weak self] tab in
                 guard let self = self else { return }
-                self.pagingViewModel.selectRow.send(tab)
+                self.pagingViewModel.selectRowSubject.send(tab)
         }).store(in: &subscriptions)
+        
     }
 }

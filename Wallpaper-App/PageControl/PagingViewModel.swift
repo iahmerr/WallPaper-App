@@ -8,14 +8,18 @@
 import Foundation
 import Combine
 
-class PagingViewModel {
+class PagingViewModel: ObservableObject {
 
     private var subscriptions = Set<AnyCancellable>()
-    let selectRow = CurrentValueSubject<Int, Never>(0)
+    let selectRowSubject = PassthroughSubject<Int, Never>()
     
-    var cityName: AnyPublisher<Int, Never> { selectRow.eraseToAnyPublisher() }
+   // var selectRowObserver = AnySubscriber<Int, Never>()
+    
+    var selectRow: AnyPublisher<Int, Never> { selectRowSubject.eraseToAnyPublisher() }
     
     init(){
-    
+        selectRow.sink(receiveValue: {
+            print("here", $0)
+        }).store(in: &subscriptions)
     }
 }
